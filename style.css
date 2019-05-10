@@ -1,0 +1,121 @@
+body {
+    font-family: 'Open Sans', sans-serif;;
+}
+
+header, footer {
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    height: 6em;
+    padding: 0.5em 1.5em;
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 2.5em;
+}
+
+.mainContainer {
+    margin: auto;
+    margin-top: 1em;
+    width: 65%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.leftContainer, .rightContainer {
+    flex: 20%;
+}
+
+.centerContainer {
+    flex: 60%;
+    padding: 1em;
+}
+
+.leftContainer {
+    background-color: #CDCDCD;
+}
+
+ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+.leftContainer li {
+    border-bottom: 1px solid #ffffff;
+    margin: 0;
+    padding: 0.5em;
+    font-weight: bold;
+}
+
+.rightContainer {
+    background-color: #44D1DA;
+}
+
+.rightContainer li {
+    margin: 0;
+    padding: 0.5em;
+}
+
+footer {
+    height: 4em;
+    padding: 1em;
+}
+
+footer ul {
+    text-align: center;
+}
+
+footer li {
+    display: inline-block;
+    font-size: 15px;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+.listItem::after{
+    content: " |";
+}
+
+@media (max-width: 1199px) {
+    .leftContainer{
+        flex: 30%;
+    }
+    .centerContainer {
+        flex: 60%;
+    }
+    .container {
+        flex-wrap: wrap;
+    }
+    .rightContainer {
+        flex: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+    .leftContainer ,.centerContainer ,.rightContainer{
+        flex: 100%;
+    }
+    .leftContainer, .rightContainer {
+        text-align: center;
+        -moz-text-align-last: center;
+    }
+}
